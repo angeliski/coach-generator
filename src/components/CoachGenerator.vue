@@ -15,6 +15,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import coach from "../coachs.json";
+import { getRandomRange } from "../util";
 
 export default defineComponent({
   name: "CoachGenerator",
@@ -26,8 +27,7 @@ export default defineComponent({
   methods: {
     generate() {
       const size = coach.length;
-      const begin = Math.floor(Math.random() * size);
-      const end = Math.floor(Math.random() * size);
+      const { begin, end } = getRandomRange(size);
       this.coach = `${coach[begin].begin} ${coach[end].end}`;
     },
   },
