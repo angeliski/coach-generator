@@ -1,16 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div
+    class="justify-center flex flex-col items-center h-screen bg-gradient-to-r from-cyan-500 to-blue-800"
+  >
+    <CoachGenerator />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import CoachGenerator from "./components/CoachGenerator.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    CoachGenerator,
   },
 });
 </script>
@@ -22,6 +25,5 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
